@@ -19,7 +19,7 @@ object MyStreamingApp {
     try {
       val spark = SparkSession.builder().appName(jobName).master("local[*]").getOrCreate()
       // TODO: change bootstrap servers to your kafka brokers
-      val bootstrapServers = "localhost:9092"
+      val bootstrapServers = "35.239.241.212:9092,35.239.230.132:9092,34.69.66.216:9092"
       val df = spark
         .readStream
         .format("kafka")
